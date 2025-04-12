@@ -140,7 +140,9 @@ export class AsyncMacroCommand
         commandInstance instanceof AsyncCommand;
 
       if (isAsync) {
-        (commandInstance as IAsyncCommand).setOnComplete(() => this.nextCommand());
+        (commandInstance as IAsyncCommand).setOnComplete(() =>
+          this.nextCommand(),
+        );
       }
       commandInstance.initializeNotifier(this.multitonKey);
       if (this.note) commandInstance.execute(this.note);

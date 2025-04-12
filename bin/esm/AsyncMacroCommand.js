@@ -125,7 +125,7 @@ export class AsyncMacroCommand extends Notifier {
             const isAsync = commandInstance instanceof AsyncMacroCommand ||
                 commandInstance instanceof AsyncCommand;
             if (isAsync) {
-                commandInstance.setOnComplete(this.nextCommand);
+                commandInstance.setOnComplete(() => this.nextCommand());
             }
             commandInstance.initializeNotifier(this.multitonKey);
             if (this.note)

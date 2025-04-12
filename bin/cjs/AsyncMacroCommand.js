@@ -128,7 +128,7 @@ class AsyncMacroCommand extends puremvc_typescript_multicore_framework_1.Notifie
             const isAsync = commandInstance instanceof AsyncMacroCommand ||
                 commandInstance instanceof AsyncCommand_1.AsyncCommand;
             if (isAsync) {
-                commandInstance.setOnComplete(this.nextCommand);
+                commandInstance.setOnComplete(() => this.nextCommand());
             }
             commandInstance.initializeNotifier(this.multitonKey);
             if (this.note)

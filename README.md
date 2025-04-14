@@ -7,12 +7,13 @@ But that leads to a tight coupling of one command to the next, if the first must
 
 With the `AsyncCommand` and `AsyncMacroCommand` you could dynamically create a pipeline of commands to be executed sequentially, each of which may have multiple async tasks to complete. None need know anything about the others.
 
+* [NPM Package](https://www.npmjs.com/package/@puremvc/puremvc-typescript-util-async-command?activeTab=readme)
+
 ## Status
 Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-async-command/blob/master/VERSION)
 
 ## Platforms / Technologies
 * [Typescript](http://en.wikipedia.org/wiki/Typescript)
-* [NPM Package](https://www.npmjs.com/package/@puremvc/puremvc-js-util-async-command)
 
 ## Ported Utility
 * This is a direct port of the original [AS3 AsyncCommand utility](https://github.com/PureMVC/puremvc-as3-util-asynccommand)

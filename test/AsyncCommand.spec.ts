@@ -1,15 +1,15 @@
-//
-//  AsyncCommand.spec.ts
-//  PureMVC TypeScript Multicore Async Command Utility
-//
-//  Copyright(c) 2024 Cliff Hall <cliff.hall@puremvc.org>
-//  Your reuse is governed by the BSD-3-Clause License
-//
+import { INotification, Notification } from "@puremvc/puremvc-typescript-multicore-framework";
+import { AsyncCommand } from "../src";
+class AsyncCommandTestVO {
 
-import { Notification }  from '@puremvc/puremvc-typescript-multicore-framework'
-import { AsyncCommandTestVO } from "./AsyncCommandTestVO";
-import { AsyncCommandTestCommand } from "./AsyncCommandTestCommand";
+    public input: number;
+    public result: number;
+    constructor(input: number) {
+        this.input = input;
+        this.result = 0;
+    }
 
+}
 /**
  * Test the PureMVC SimpleCommand class.
  *
@@ -31,6 +31,16 @@ describe("AsyncCommandTest", () => {
      * be modified by the AsyncCommand.
      */
     test("testAsyncCommandExecute", () => {
+
+        class AsyncCommandTestCommand extends AsyncCommand {
+
+            execute(notification: INotification): void {
+                const vo: AsyncCommandTestVO = notification.body as AsyncCommandTestVO;
+                vo.result = vo.input * vo.input;
+            }
+
+        }
+
         // Create the VO
         const vo = new AsyncCommandTestVO(5);
 
@@ -44,7 +54,7 @@ describe("AsyncCommandTest", () => {
         command.execute(notification);
 
         // test assertions
-        expect(vo.result).toBe(10);
+        expect(vo.result).toBe(25);
 
     });
 

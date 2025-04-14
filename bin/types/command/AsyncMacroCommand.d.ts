@@ -1,4 +1,4 @@
-import { IAsyncCommand } from "./types";
+import { IAsyncCommand } from "../interfaces/IAsyncCommand";
 import { ICommand, INotification, INotifier, Notifier } from "@puremvc/puremvc-typescript-multicore-framework";
 /**
  * A base <code>ICommand</code> implementation that executes other

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "PureMVC AsyncCommand Utility for TypeScript",
   "main": "./bin/cjs/index.js",
-  "module": "./bin/esm/index.js",
+  "module": "bin/esm/command/index.js",
   "exports": {
     ".": {
       "import": {
@@ -26,16 +26,18 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run build:lib",
-    "build:lib": "npm run build:cjs && npm run build:esm",
-    "build:esm": "tsc --module esnext --outDir bin/esm && echo '{\"type\": \"module\"}' > bin/esm/package.json",
-    "build:cjs": "tsc --module commonjs --outDir bin/cjs && echo '{\"type\": \"commonjs\"}' > bin/cjs/package.json",
-    "build:doc": "typedoc",
-    "clean": "rm -rf bin",
-    "format": "prettier --write ./src",
-    "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
+    "test": "jest --coverage",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "test": "jest --coverage"
+    "format": "prettier --write ./src",
+    "npm:publish:dry-run": "npm publish --dry-run",
+    "npm:publish": "npm publish --access public",
+    "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
+    "build:lib": "npm run build:cjs && npm run build:esm",
+    "build:esm": "tsc --module esnext --outDir bin/esm && echo '{\"type\": \"module\"}' > bin/esm/package.json && rm -rf bin/esm/interfaces",
+    "build:cjs": "tsc --module commonjs --outDir bin/cjs && echo '{\"type\": \"commonjs\"}' > bin/cjs/package.json && rm -rf bin/cjs/interfaces",
+    "build:doc": "typedoc",
+    "clean": "rm -rf bin"
   },
   "nyc": {
     "extension": [
@@ -49,17 +51,29 @@
       "lcov"
     ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PureMVC/puremvc-typescript-util-state-machine.git"
+  },
+  "homepage": "https://puremvc.org",
+  "bugs": {
+    "url": "https://github.com/PureMVC/puremvc-typescript-util-state-machine/issues"
+  },
+  "keywords": [
+    "puremvc",
+    "typescript",
+    "mvc",
+    "state machine"
+  ],
+  "author": "Cliff Hall cliff@futurescale.com",
+  "license": "BSD-3-Clause",
   "directories": {
     "doc": "docs",
     "test": "test",
     "bin": "bin"
   },
   "dependencies": {
-    "@puremvc/puremvc-js-multicore-framework": "^2.0.9",
-    "@puremvc/puremvc-typescript-multicore-framework": "2.0.5",
+    "@puremvc/puremvc-typescript-multicore-framework": "^2.1.1",
     "typescript": "^5.7.3"
   },
   "devDependencies": {

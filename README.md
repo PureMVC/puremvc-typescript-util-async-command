@@ -20,8 +20,8 @@ Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-
 
 
 ## License
-* PureMVC Utility for JS - AsyncCommand - Ported by Cliff Hall (no relation)
-* From PureMVC Utility for AS3 - AsyncCommand - Copyright © 2008 Duncan Hall
+* PureMVC Utility for Typescript - AsyncCommand - Ported by Cliff Hall
+* From PureMVC Utility for AS3 - AsyncCommand - Copyright © 2008 Duncan Hall (no relation)
 * PureMVC - Copyright © 2007-2025 Futurescale, Inc.
 * All rights reserved.
 

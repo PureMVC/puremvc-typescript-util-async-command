@@ -1,4 +1,5 @@
-import { AsyncCommand } from "./AsyncCommand";
-import { AsyncMacroCommand } from "./AsyncMacroCommand";
+export { AsyncCommand } from "./command/AsyncCommand";
+export { AsyncMacroCommand } from "./command/AsyncMacroCommand";
+export type { IAsyncCommand } from "./interfaces/IAsyncCommand";
 
-export { AsyncCommand, AsyncMacroCommand };
+

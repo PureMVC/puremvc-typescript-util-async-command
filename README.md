@@ -7,21 +7,21 @@ But that leads to a tight coupling of one command to the next, if the first must
 
 With the `AsyncCommand` and `AsyncMacroCommand` you could dynamically create a pipeline of commands to be executed sequentially, each of which may have multiple async tasks to complete. None need know anything about the others.
 
-* [NPM Package](https://www.npmjs.com/package/@puremvc/puremvc-typescript-util-async-command?activeTab=readme)
-
-## Status
-Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-async-command/blob/master/VERSION)
+```shell
+npm install @puremvc/puremvc-typescript-multicore-framework
+npm install @puremvc/puremvc-typescript-util-async-command 
+```
 
 ## Platforms / Technologies
-* [Typescript](http://en.wikipedia.org/wiki/Typescript)
+* [Typescript](http://typescriptlang.org)
+* [PureMVC MultiCore](https://github.com/PureMVC/puremvc-typescript-multicore-framework)
+* [NPM](https://www.npmjs.com/package/@puremvc/puremvc-typescript-util-async-command?activeTab=readme)
 
 ## Ported Utility
 * This is a direct port of the original [AS3 AsyncCommand utility](https://github.com/PureMVC/puremvc-as3-util-asynccommand)
-* [Historical Discussion](http://forums.puremvc.org/index.php?topic=831.0)
-
 
 ## License
-* PureMVC Utility for Typescript - AsyncCommand - Ported by Cliff Hall
+* PureMVC Utility for Typescript - AsyncCommand - Copyright © 2008 [Cliff Hall](https://github.com/cliffhall)
 * From PureMVC Utility for AS3 - AsyncCommand - Copyright © 2008 Duncan Hall (no relation)
 * PureMVC - Copyright © 2007-2025 Futurescale, Inc.
 * All rights reserved.

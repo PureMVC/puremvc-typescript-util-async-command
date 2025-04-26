@@ -1,4 +1,4 @@
-## [PureMVC](http://puremvc.github.com/) [Typescript](https://github.com/PureMVC/puremvc-typescript-multicore-framework/wiki) Utility: Async Command
+## [PureMVC](http://puremvc.github.com/) [Typescript](https://github.com/PureMVC/puremvc-typescript-multicore-framework) Utility: Async Command
 The Async Command utility offers a solution to the problem of executing a series of commands each of which may need to complete one or more asynchronous operations before the next command is executed.
 
 The problem can be handled without this utility, by having a `SimpleCommand` send a notification when a promise resolves, thereby triggering the next command.

@@ -40,7 +40,6 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     if: github.event_name == 'release'
-    environment: release
     needs: build
 
     permissions:

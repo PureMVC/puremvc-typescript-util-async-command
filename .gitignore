@@ -1,5 +1,5 @@
 .idea
 .goose
-.bin
+bin
 coverage
 node_modules

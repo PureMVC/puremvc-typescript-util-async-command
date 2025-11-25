@@ -1,6 +1,6 @@
 {
   "name": "@puremvc/puremvc-typescript-util-async-command",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "PureMVC AsyncCommand Utility for TypeScript",
   "main": "./bin/cjs/index.js",
   "module": "bin/esm/index.js",

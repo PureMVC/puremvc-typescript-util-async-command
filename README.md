@@ -7,6 +7,10 @@ But that leads to a tight coupling of one command to the next, if the first must
 
 With the `AsyncCommand` and `AsyncMacroCommand` you could dynamically create a pipeline of commands to be executed sequentially, each of which may have multiple async tasks to complete. None need know anything about the others.
 
+## Dev Guide
+* [PureMVC TypeScript Async Command — Developer Guide](DEV_GUIDE.md)
+
+## Installation
 ```shell
 npm install @puremvc/puremvc-typescript-multicore-framework
 npm install @puremvc/puremvc-typescript-util-async-command 

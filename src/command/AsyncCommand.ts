@@ -1,4 +1,4 @@
-import { IAsyncCommand } from "../interfaces/IAsyncCommand";
+import { IAsyncCommand } from "../interfaces/IAsyncCommand.js";
 import { SimpleCommand } from "@puremvc/puremvc-typescript-multicore-framework";
 
 /**

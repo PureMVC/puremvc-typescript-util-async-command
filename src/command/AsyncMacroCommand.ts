@@ -1,5 +1,5 @@
-import { IAsyncCommand } from "../interfaces/IAsyncCommand";
-import { AsyncCommand } from "./AsyncCommand";
+import { IAsyncCommand } from "../interfaces/IAsyncCommand.js";
+import { AsyncCommand } from "./AsyncCommand.js";
 import {
   ICommand,
   INotification,

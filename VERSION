@@ -1,13 +1,14 @@
 PureMVC Typescript Utility - State Machine
 --------------------------------------------------------------------------
-Release Date: 11/25/25
+Release Date: 12/19/25
     Platform: Typescript
      Version: 1
     Revision: 0
-       Minor: 7
+       Minor: 8
      Authors: Cliff Hall <cliff.hall@puremvc.org>
 --------------------------------------------------------------------------
 
 1.0.0 Initial port from the AS3 source.
 1.0.2 Fix entrypoint
 1.0.3 - 1.0.7 Configure npm publishing workflow
+1.0.8 - Add .js to filenames imported and exported throughout the library.

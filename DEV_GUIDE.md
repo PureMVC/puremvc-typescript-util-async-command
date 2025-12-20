@@ -13,13 +13,15 @@ You often need to execute a series of commands where one or more steps perform a
 - `AsyncCommand` — base class for a command that may finish later; call `commandComplete()` when done.
 - `AsyncMacroCommand` — orchestrates a FIFO list of sub‑commands. Supports both sync (`SimpleCommand`) and async (`AsyncCommand`/`AsyncMacroCommand`) sub‑commands.
 
-Imports (ESM):
-```ts
-import { AsyncCommand } from "./src/command/AsyncCommand.js";
-import { AsyncMacroCommand } from "./src/command/AsyncMacroCommand.js";
-// Or, if consuming from the published package:
-// import { AsyncCommand, AsyncMacroCommand } from "@puremvc/puremvc-typescript-util-async-command";
+### Install
+```
+npm install @puremvc/puremvc-typescript-multicore-framework
+npm install @puremvc/puremvc-typescript-util-async-command
+```
 
+### Imports (ESM):
+```ts
+import { AsyncCommand, AsyncMacroCommand } from "@puremvc/puremvc-typescript-util-async-command";
 import {
   SimpleCommand,
   INotification,
